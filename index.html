@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Subida salarial 2027 en el sector público: qué dice el Real Decreto-ley 37/2026, calendario y calculadora. FAC-USO.">
+<meta name="description" content="Subida salarial 2027 en el sector público: qué dice el Real Decreto-ley 37/2026, calendario y posición de FAC-USO.">
 <meta property="og:title" content="Subida salarial 2027 · FAC-USO">
-<meta property="og:description" content="Un 4,5 % que no cubre el coste de la vida. Calcula cuánto te sube a ti.">
+<meta property="og:description" content="Un 4,5 % que no es un regalo y no cubre el coste de la vida. Todas las claves, paso a paso.">
 <meta property="og:type" content="website">
 <title>Subida salarial 2027</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
 <style>
-/* Presentación por diapositivas: una idea por pantalla, banda roja de marca arriba, calculadora como pieza central. */
+/* Presentación por diapositivas: una idea por pantalla, banda roja de marca arriba. */
 :root{
   --rojo:#e71615; --rojo-oscuro:#b31110; --verde:#00874a; --tinta:#191919; --suave:#5c5c5c;
   --fondo:#ffffff; --bloque:#f2f2f2; --linea:#e1e1e1; --rosa:#fde9e9; --verde-claro:#e6f6ed;
@@ -70,25 +70,7 @@ details .q{color:var(--suave);font-size:14.5px}
 .chip.ok{background:var(--verde-claro);color:var(--verde)}
 .chip.pend{background:var(--rosa);color:var(--rojo)}
 .aviso{font-style:italic;color:var(--suave);font-size:.92em}
-/* calculadora */
-.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:18px}
-@media (max-width:680px){.calc{grid-template-columns:1fr}.hito{grid-template-columns:1fr;gap:2px}}
-.campo{display:flex;flex-direction:column;gap:6px}
-.campo label{font-weight:700;font-size:14px}
-.campo input[type=number]{font:700 22px var(--f);padding:10px 12px;border:2px solid var(--linea);border-radius:12px;background:var(--fondo);color:var(--tinta);width:100%}
-.campo input[type=range]{width:100%;accent-color:var(--rojo)}
-.seg{display:flex;gap:8px}
-.seg button{flex:1;font:700 15px var(--f);padding:10px;border-radius:12px;border:2px solid var(--linea);background:var(--fondo);color:var(--tinta);cursor:pointer}
-.seg button[aria-pressed=true]{background:var(--tinta);color:var(--fondo);border-color:var(--tinta)}
-.res{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.res .caja{padding:12px 14px}.res .num{font-size:clamp(22px,5vw,32px)}
-.res .ancho{grid-column:1/-1}
-.barras{display:flex;flex-direction:column;gap:8px}
-.barra{display:grid;grid-template-columns:86px 1fr 56px;gap:8px;align-items:center;font-size:14px;font-weight:500}
-.barra i{display:block;height:18px;border-radius:9px;background:var(--verde)}
-.barra.ipc i{background:var(--rojo)}
-.barra .pista{background:var(--bloque);border-radius:9px}
-.barra span:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+@media (max-width:680px){.hito{grid-template-columns:1fr;gap:2px}}
 /* navegación */
 nav.pie{position:sticky;bottom:0;background:var(--fondo);border-top:1px solid var(--linea);padding-bottom:env(safe-area-inset-bottom,0px)}
 nav.pie .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:10px}
@@ -126,7 +108,7 @@ a{color:var(--rojo);font-weight:500;overflow-wrap:anywhere}
     <div class="grande">+4,5&nbsp;%</div>
     <p>El <strong>Real Decreto-ley 37/2026</strong> aprueba una subida máxima del 4,5&nbsp;% para todo el personal del sector público, con efectos desde el <strong>1 de enero de 2027</strong>.</p>
     <div class="sello">No es un regalo, y no cubre el coste de la vida<small>Es cumplir un acuerdo de 2025. Y el IPC de octubre está en el 4,9&nbsp;% (INE)</small></div>
-    <p>Aquí tienes qué dice la norma, qué falta para cobrarla, una <strong>calculadora</strong> para ver tu caso y lo que exige FAC-USO.</p>
+    <p>Aquí tienes qué dice la norma, qué falta para cobrarla y lo que exige FAC-USO.</p>
   </div></div>
 </section>
 
@@ -178,38 +160,6 @@ a{color:var(--rojo);font-weight:500;overflow-wrap:anywhere}
       <div class="hito"><b class="f">Enero de 2027</b><span>Primera nómina prevista con la subida. <span class="aviso">(dato pendiente de confirmación oficial)</span></span></div>
       <div class="hito"><b class="f">1.er trimestre de 2027</b><span>Abono del 0,5&nbsp;% adicional de 2026, con atrasos, si el IPC interanual de diciembre llega al 1,5&nbsp;%. <span class="chip pend">Condicionado</span></span></div>
     </div>
-  </div></div>
-</section>
-
-<section class="dia" data-t="Calculadora">
-  <div class="banda"><div class="wrap"><p class="ante">Tu caso</p><h2>Calcula cuánto te sube</h2></div></div>
-  <div class="cuerpo"><div class="wrap">
-    <div class="calc">
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <div class="campo"><label for="bruto">Tu sueldo bruto anual de 2026 (€)</label>
-          <input id="bruto" type="number" inputmode="decimal" min="0" step="500" value="30000">
-          <span class="nota" style="font-size:13px;color:var(--suave)">30.000 € es un ejemplo. Escribe el tuyo.</span></div>
-        <div class="campo"><label>Número de pagas</label>
-          <div class="seg"><button type="button" id="p14" aria-pressed="true">14 pagas</button><button type="button" id="p12" aria-pressed="false">12 pagas</button></div></div>
-        <div class="campo"><label for="ipc">IPC con el que comparar: <span id="ipcv">4,9</span>&nbsp;%</label>
-          <input id="ipc" type="range" min="0" max="8" step="0.1" value="4.9">
-          <span class="nota" style="font-size:13px;color:var(--suave)">4,9&nbsp;% es la tasa anual de octubre de 2026 (INE).</span></div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div class="res">
-          <div class="caja verde"><div class="et">Subida al año</div><div class="num" id="rAno">—</div></div>
-          <div class="caja verde"><div class="et">Por paga</div><div class="num" id="rPaga">—</div></div>
-          <div class="caja"><div class="et">Para igualar el IPC</div><div class="num" id="rIpc">—</div></div>
-          <div class="caja rosa"><div class="et" id="rDifEt">Te quedas corto en</div><div class="num" id="rDif">—</div></div>
-          <div class="caja ancho"><div class="et">Bruto anual en 2027</div><div class="num" id="rNuevo">—</div></div>
-        </div>
-        <div class="barras" aria-hidden="true">
-          <div class="barra"><span>Tu subida</span><span class="pista"><i id="bSub"></i></span><span>4,5&nbsp;%</span></div>
-          <div class="barra ipc"><span>Precios</span><span class="pista"><i id="bIpc"></i></span><span id="bIpcT">4,9&nbsp;%</span></div>
-        </div>
-      </div>
-    </div>
-    <p class="aviso">Cálculo orientativo en bruto, aplicando el 4,5&nbsp;% a todo el salario. El neto depende de tu retención de IRPF y de tus cotizaciones. Nada de lo que escribes sale de tu dispositivo.</p>
   </div></div>
 </section>
 
@@ -276,7 +226,7 @@ a{color:var(--rojo);font-weight:500;overflow-wrap:anywhere}
 <nav class="pie" aria-label="Diapositivas"><div class="wrap">
   <button type="button" id="ant">Anterior</button>
   <div style="display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0">
-    <span class="cont" id="cont">1 / 9</span>
+    <span class="cont" id="cont">1 / 8</span>
     <div class="puntos" id="puntos"></div>
   </div>
   <button type="button" id="sig">Siguiente</button>
@@ -310,32 +260,6 @@ a{color:var(--rojo);font-weight:500;overflow-wrap:anywhere}
     if(!d.open)return; var c=d.parentNode.querySelectorAll('details');
     [].forEach.call(c,function(o){if(o!==d)o.open=false});});});
 
-  // Calculadora
-  var SUB=4.5, pagas=14;
-  var bruto=document.getElementById('bruto'), ipc=document.getElementById('ipc');
-  function eur(x,d){return x.toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d,useGrouping:'always'})+' €'}
-  function pct(x){return x.toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1})}
-  function calc(){
-    var b=Math.max(0,parseFloat(bruto.value)||0), p=parseFloat(ipc.value)||0;
-    var s=b*SUB/100, n=b*p/100, dif=n-s;
-    document.getElementById('rAno').textContent='+'+eur(s,0);
-    document.getElementById('rPaga').textContent='+'+eur(s/pagas,2);
-    document.getElementById('rIpc').textContent='+'+eur(n,0);
-    document.getElementById('rNuevo').textContent=eur(b+s,0);
-    var caja=document.getElementById('rDif').parentNode;
-    if(dif>0.5){document.getElementById('rDifEt').textContent='Te quedas corto en';document.getElementById('rDif').textContent=eur(dif,0)+' al año';caja.className='caja rosa'}
-    else if(dif<-0.5){document.getElementById('rDifEt').textContent='Ganas frente a ese IPC';document.getElementById('rDif').textContent=eur(-dif,0)+' al año';caja.className='caja verde'}
-    else{document.getElementById('rDifEt').textContent='Frente a ese IPC';document.getElementById('rDif').textContent='Igualas';caja.className='caja'}
-    document.getElementById('ipcv').textContent=pct(p);
-    document.getElementById('bIpcT').textContent=pct(p)+' %';
-    document.getElementById('bSub').style.width=(SUB/8*100)+'%';
-    document.getElementById('bIpc').style.width=(p/8*100)+'%';
-  }
-  function setP(n){pagas=n;document.getElementById('p14').setAttribute('aria-pressed',n===14);document.getElementById('p12').setAttribute('aria-pressed',n===12);calc()}
-  document.getElementById('p14').addEventListener('click',function(){setP(14)});
-  document.getElementById('p12').addEventListener('click',function(){setP(12)});
-  bruto.addEventListener('input',calc); ipc.addEventListener('input',calc);
-  calc();
 })();
 </script>
 
